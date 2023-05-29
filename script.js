@@ -19,7 +19,9 @@ console.log(parrafo.innerHTML);
 
 function funcborrar(){  
     parrafo.innerHTML = "Total a Pagar: $";
-  
+}
+function goComprar(){
+    document.location.href = "comprar.html";
 }
 
 function validateform(){  
