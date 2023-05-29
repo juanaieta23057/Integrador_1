@@ -27,6 +27,14 @@
 .buttoncolorgreenyellow{
     background-color:#96c93e;
 }
+.buttoncolorgreenyellowwhithe{
+    background-color:#96c93e;
+    color: aliceblue;
+}
+.pcolorceleste{
+    background-color:powderblue;
+    color:darkblue;
+}
 .pie li a{
     width: 8rem; 
 }
