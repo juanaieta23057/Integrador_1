@@ -32,7 +32,6 @@ if(pagina=="comprar.html"){
     let arrayDescuento =[100,20,50,85];
 
     console.log("parrafo inner: ${}"+parrafo.innerHTML);
-
     cantidad = selecant.value;
     console.log("selecant:  "+selecant.value);
     categoria = selecat.value;
@@ -66,8 +65,6 @@ if(pagina=="comprar.html"){
     function setTotal(localTotal, localSelDescuento){  
         return 200 * localTotal * arrayDescuento[localSelDescuento] / 100 ;
     }
-
-
 
 }else{
 
