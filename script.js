@@ -14,16 +14,21 @@ if(pagina=="comprar.html"){
     const apellido = document.getElementById("inpapellido");
     const correo = document.getElementById("inpcorreo");
     const parrafo = document.getElementById("parrafototal");
+    const selecat = document.getElementById("selcategoria");
+    const selecant = document.getElementById("selcantidad");
+    
+    
     btndel.addEventListener('click',funcborrar);
     btnsend.addEventListener('click',validateform);
-
+    selecat.addEventListener('onchange',validateform);
+    selecant.addEventListener('onchange',validateform);
 
     function funcborrar(){  
         parrafo.innerHTML = "Total a Pagar: $";
     }
 
-    var cantidad = 0;
-    var categoria = 0;
+    var cantidad;
+    var categoria;
     let arrayDescuento =[100,20,50,85];
 
     console.log("parrafo inner: ${}"+parrafo.innerHTML);
