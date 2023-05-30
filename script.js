@@ -20,8 +20,8 @@ if(pagina=="comprar.html"){
     
     btndel.addEventListener('click',funcborrar);
     btnsend.addEventListener('click',validateform);
-    selecat.addEventListener('onchange',validateform);
-    selecant.addEventListener('onchange',validateform);
+    selecat.addEventListener('change',setCat);
+    selecant.addEventListener('change',setQ);
 
     function funcborrar(){  
         parrafo.innerHTML = "Total a Pagar: $";
@@ -33,6 +33,10 @@ if(pagina=="comprar.html"){
 
     console.log("parrafo inner: ${}"+parrafo.innerHTML);
 
+    cantidad = selecant.value;
+    console.log("selecant:  "+selecant.value);
+    categoria = selecat.value;
+    console.log("selecat:  "+selecat.value);
 
     function validateform(){  
         if(nombre.value == null || nombre.value ==''){
@@ -41,22 +45,22 @@ if(pagina=="comprar.html"){
                 alert("Apellido no puede estar vacío");
                 }else if(correo.value == null || correo.value ==''){
                     alert("Correo no puede estar vacío");
-                    }else if(cantidad == null || cantidad =='' || cantidad == 0){
+                       }else if(cantidad == null || cantidad =='' || cantidad == 0 || cantidad == NaN){
                         alert("Cantidad debe ser mayor que Cero");
-                        }else if(categoria == null || categoria =='' || categoria == 0){
+                        }else if(categoria == null || categoria =='' || categoria == 0 || categoria == NaN){
                             alert("Elegir una categoría");
         }else{
             parrafo.innerHTML = "Total a Pagar: $" + setTotal(cantidad,categoria);
         }
     }       
-    function setQ(selectedcantidad){  
-        cantidad = selectedcantidad;
-        console.log(cantidad);
+    function setQ(){  
+        cantidad = selecant.value;
+        console.log("cantidad: "+cantidad);
     }
     
-    function setCat(selectedcategoria){  
-        categoria = selectedcategoria;
-        console.log(categoria);
+    function setCat(){  
+        categoria = selecat.value;
+        console.log("categoria: "+categoria);
     }
     
     function setTotal(localTotal, localSelDescuento){  
