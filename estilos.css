@@ -54,7 +54,7 @@
   .navbar-collapse.container.nav li:nth-child(3),
   .navbar-collapse.container.nav li:nth-child(4),
   .navbar-collapse.container.nav li:nth-child(5),
-  .navbar-collapse.container.nav li:nth-child(:last-child){ 
+  .navbar-collapse.container.nav li:last-child{ 
     margin-top: 3px;
 }
 
