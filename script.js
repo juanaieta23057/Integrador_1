@@ -5,20 +5,7 @@ var pagina = path.split("/").pop();
 console.log( pagina );
 
 
-if(pagina=="index.html"){
-
-    const btn0 = document.querySelector("#btncomprar0");
-    const btn1 = document.querySelector("#btncomprar1");
-    const btn2 = document.querySelector("#btncomprar2");
-
-    console.log(btn0);
-    btn0.addEventListener('click',goComprar);
-    btn1.addEventListener('click',goComprar);
-    btn2.addEventListener('click',goComprar);
-    function goComprar(){
-        document.location.href = "comprar.html";
-    }
-}else{
+if(pagina=="comprar.html"){
     let selcat = 0;
     let preciobase = 200;
     const btndel = document.querySelector("#btnborrar");
@@ -69,6 +56,22 @@ if(pagina=="index.html"){
     
     function setTotal(localTotal, localSelDescuento){  
         return 200 * localTotal * arrayDescuento[localSelDescuento] / 100 ;
+    }
+
+
+
+}else{
+
+    const btn0 = document.querySelector("#btncomprar0");
+    const btn1 = document.querySelector("#btncomprar1");
+    const btn2 = document.querySelector("#btncomprar2");
+
+    console.log(btn0);
+    btn0.addEventListener('click',goComprar);
+    btn1.addEventListener('click',goComprar);
+    btn2.addEventListener('click',goComprar);
+    function goComprar(){
+        document.location.href = "comprar.html";
     }
     
 }
